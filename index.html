@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<style>
+    #results {
+        border: 1px solid #DDD;
+        width: 300px;
+        padding: 0;
+        margin-top: 0;
+        overflow: hidden
+    }
+
+    .speech input {
+        border: 0;
+        width: 240px;
+        display: inline-block;
+        height: 30px;
+    }
+
+    .speech img {
+        float: right;
+        width: 40px
+    }
+
+    #start_button {
+        background: url('./img/mic.gif');
+        width: 50px;
+        height: 50px;
+        float: right;
+    }
+
+    #start_button.animated {
+        background: url('./img/mic-animate.gif');
+        width: 50px;
+        height: 50px
+    }
+</style>
+<input type="button" value="Edit" class="edit-btn" onclick="edit(event)"/>
+
+<div id="results">
+    <input type="button" title='Кликни на микрофон чтобы начать диктовать' id="start_button"
+           onclick="startButton(event)"/>
+
+    <div id="results-inner" contenteditable="false">
+        <span id="final_span" contenteditable="false" class="final"></span>
+        <span id="interim_span" contenteditable="false" class="interim"></span>
+    </div>
+</div>
+<script src="js/speech.js"></script>
+</body>
+</html>
